@@ -1,0 +1,141 @@
+/*font-family: 'Lexend Deca', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Spartan:wght@400;500;700&display=swap');
+/*font-family: 'Big Shoulders Display', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Spartan:wght@400;500;700&display=swap');
+
+:root{
+    /*colors*/
+    --fisrt-background: hsl(31, 77%, 52%);
+    --second-background: hsl(184, 100%, 22%);
+    --third-background: hsl(179, 100%, 13%);
+    --clr-paragraph: hsla(0, 0%, 100%, 0.75);
+    --clr-btn: hsl(0, 0%, 95%); /*background, headings, buttons*/
+
+    /*numbers*/
+    --br-card: 1rem;
+    --btn-transition: 100ms;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: calc(100vh - 1px); */
+    /* affects container and attribution */
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--clr-btn);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/*====================================================================================================================*/
+
+/* General */
+
+/* 1.Card */
+.cards{
+    display: flex;
+    margin-top: 10rem;
+}
+@media(max-width:1117px){
+    .cards{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}
+
+.card{
+    width: 13.5rem;
+    padding: 4rem;
+    line-height: 1.5;
+}
+img{
+    margin-bottom: 1.2rem;
+}
+.card header {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 1.5rem;
+    color: var(--clr-btn);
+    margin-bottom: 2rem;
+}
+.card p{
+    color: var(--clr-paragraph);
+    margin-bottom: 1.2rem;
+}
+
+/* 2.Button */
+button{
+    margin-top: 4rem;
+    border: none;
+    border-radius: 1.5rem;
+    padding: .8rem 2rem .8rem 2rem;
+    font-family: sans-serif;
+    font-weight: 700; 
+    cursor: pointer;
+}
+button:hover{
+    border: 2px solid var(--clr-btn);
+    color: var(--clr-btn);
+}
+
+/* individual */
+
+/* 1.Cards */
+
+li:nth-child(1){
+    border-radius: var(--br-card) 0 0 var(--br-card);
+    background-color: var(--fisrt-background);
+}
+li:nth-child(2){
+    background-color: var(--second-background);
+}
+li:nth-child(3){
+    border-radius: 0 var(--br-card) var(--br-card) 0;
+    background-color: var(--third-background);
+}
+@media(max-width:1117px){
+    li:nth-child(1){
+        border-radius: var(--br-card) var(--br-card) 0 0;
+    }
+    li:nth-child(3){
+        border-radius: 0 0 var(--br-card) var(--br-card);
+    }
+}
+
+/* 2.Buttons */
+
+.btn-1{
+    color: var(--fisrt-background);
+    transition: calc(var(--btn-transition)*3);
+}
+.btn-1:hover{
+    background-color: var(--fisrt-background);
+    transition: var(--btn-transition);
+}
+
+.btn-2{
+    color: var(--second-background);
+    transition: calc(var(--btn-transition)*3);
+}
+.btn-2:hover{
+    background-color: var(--second-background);
+    transition: var(--btn-transition);
+}
+
+.btn-3{
+    color: var(--third-background);
+    transition: calc(var(--btn-transition)*3);
+}
+.btn-3:hover{
+    background-color: var(--third-background);
+    transition: var(--btn-transition);
+}
